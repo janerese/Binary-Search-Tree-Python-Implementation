@@ -60,6 +60,17 @@ class BinarySearchTreeNode:
                 return False
 
     # Added functions to enhance the BinarySearchTreeNode class
+    def pre_order_traversal(self):
+        elements = []
+        
+        if self.left:
+            elements += self.left.pre_order_traversal
+        
+        if self.right:
+            elements += self.right.pre_order_traversal()
+
+        return elements
+
     def find_min(self):
         if self.left is None:
             return self.data
