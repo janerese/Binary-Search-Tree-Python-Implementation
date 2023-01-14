@@ -116,6 +116,7 @@ class BinarySearchTreeNode:
         return self
 
 def build_tree(elements):
+    print("Building tree with these elements:", elements)
     root = BinarySearchTreeNode(elements[0])
 
     for i in range(1, len(elements)):
@@ -127,3 +128,6 @@ if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree = build_tree(numbers)
 
+    # Testing the BinarySearchTreeNode class with added delete() function
+    numbers_tree.delete(20)
+    print("After deleting 20:", numbers_tree.in_order_traversal())
