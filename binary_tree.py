@@ -1,4 +1,6 @@
 # Erika Jane T. Reyes
+# Data Structure and Algorithms
+# Binary Search Tree Part 1
 
 # Defining binary search tree Class (BinarySearchTreeNode)
 class BinarySearchTreeNode:
