@@ -126,6 +126,7 @@ def build_tree(elements):
 if __name__ == '__main__':
     strings = ["E", "R", "I", "K", "A", "J", "A", "N", "E", "T", "R", "E", "Y", "E", "S"]
     strings_tree = build_tree(strings)
+    print('\n')
 
     # Testing the search() method
     print("Letter E is in the list?", strings_tree.search("E"))
