@@ -68,5 +68,16 @@ def build_tree(elements):
 if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree = build_tree(numbers)
+    
+    # 1st Example (Numbers)
     print(numbers_tree.in_order_traversal())
     print(numbers_tree.search(20))
+
+    # 2nd Example (Strings)
+    countries = ["India", "Pakistan", "Germany", "USA", "China", "India", "UK", "USA"]
+    country_tree = build_tree(countries)
+
+    print("Uk is in the lsit? ", country_tree.search("UK"))
+    print("Sweden is in the list? ", country_tree.search("Sweden"))
+
+    print(country_tree.in_order_traversal())
