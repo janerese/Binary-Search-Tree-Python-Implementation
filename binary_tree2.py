@@ -80,7 +80,7 @@ class BinarySearchTreeNode:
     def find_min(self):
         if self.left is None:
             return self.data
-        return self.right.find_min()
+        return self.left.find_min()
 
     def find_max(self):
         if self.right is None:
