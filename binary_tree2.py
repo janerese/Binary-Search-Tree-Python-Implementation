@@ -95,11 +95,11 @@ class BinarySearchTreeNode:
     def delete(self, val):
         if val < self.data:
             if self.left:
-                self.left.delete(val)
+                self.left = self.left.delete(val)
 
         elif val > self.data:
             if self.right:
-                self.right.delete(val)
+                self.left = self.right.delete(val)
 
         else:
             if self.left is None and self.right is None:
@@ -125,9 +125,9 @@ def build_tree(elements):
     return root
 
 if __name__ == '__main__':
-    numbers = [17, 4, 1, 20, 9, 23, 18, 34]
-    numbers_tree = build_tree(numbers)
+    numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
 
     # Testing the BinarySearchTreeNode class with added delete() function
     numbers_tree.delete(20)
     print("After deleting 20:", numbers_tree.in_order_traversal())
+
