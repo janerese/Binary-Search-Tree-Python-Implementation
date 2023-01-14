@@ -108,3 +108,12 @@ def build_tree(elements):
 if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree = build_tree(numbers)
+
+    # Testing the enhanced BinarySearchTreeNode class
+    print("Input numbers:", numbers)
+    print("Mininum element:", numbers_tree.find_min())
+    print("Maximum element:", numbers_tree.find_max())
+    print("Sum of all elements:", numbers_tree.calculate_sum())
+    print("In order traversal:", numbers_tree.in_order_traversal())
+    print("Pre order traversal:", numbers_tree.pre_order_traversal())
+    print("Post order traversal:", numbers_tree.post_order_traversal())
