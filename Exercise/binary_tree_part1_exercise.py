@@ -61,7 +61,7 @@ class BinarySearchTreeNode:
 
     # Added functions to enhance the BinarySearchTreeNode class
     def pre_order_traversal(self):
-        elements = []
+        elements = [self.data]
 
         if self.left:
             elements += self.left.pre_order_traversal
