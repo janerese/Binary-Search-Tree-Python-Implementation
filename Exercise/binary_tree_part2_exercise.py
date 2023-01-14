@@ -1,5 +1,5 @@
 # Erika Jane T. Reyes
-# Exercise 2: Modifying the delete() function in BinarySearchTreeNode class
+# Exercise 2: Modifying the delete() function in BinarySearchTreeNode class to use max value from left subtree
 
 class BinarySearchTreeNode:
     def __init__(self, data):
