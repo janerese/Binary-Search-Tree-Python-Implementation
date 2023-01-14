@@ -126,24 +126,46 @@ def build_tree(elements):
 if __name__ == '__main__':
     strings = ["E", "R", "I", "K", "A", "J", "A", "N", "E", "T", "R", "E", "Y", "E", "S"]
     strings_tree = build_tree(strings)
-    print("Input strings:", strings)
 
     # Testing the search() method
     print("Letter E is in the list?", strings_tree.search("E"))
     print("Letter K is in the list?", strings_tree.search("K"))
     print("Letter Q is in the list?", strings_tree.search("Q"))
+    print('\n')
 
     # Testing the find_min() method
     print("Mininum element:", strings_tree.find_min())
+    print('\n')
 
     # Testing the find_max() method
     print("Maximum element:", strings_tree.find_max())
+    print('\n')
 
     # Testing the in_order_traversal() method
     print("In order traversal:", strings_tree.in_order_traversal())
+    print('\n')
 
     # Testing the pre_order_traversal() method
     print("Pre order traversal:", strings_tree.pre_order_traversal())
+    print('\n')
 
     # Testing the post_order_traversal() method
     print("Post order traversal:", strings_tree.post_order_traversal())
+    print('\n')
+
+    # Testing the delete() method
+    strings_tree = build_tree(strings)
+    strings_tree.delete("E")
+    print("After deleting letter E:", strings_tree.in_order_traversal())
+
+    print("\n")
+
+    strings_tree = build_tree(strings)
+    strings_tree.delete("J")
+    print("After deleting letter J:", strings_tree.in_order_traversal())
+
+    print("\n")
+
+    strings_tree = build_tree(strings)
+    strings_tree.delete("Y")
+    print("After deleting letter Y:", strings_tree.in_order_traversal())
