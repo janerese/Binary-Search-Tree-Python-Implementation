@@ -64,7 +64,7 @@ class BinarySearchTreeNode:
         elements = [self.data]
 
         if self.left:
-            elements += self.left.pre_order_traversal
+            elements += self.left.pre_order_traversal()
         
         if self.right:
             elements += self.right.pre_order_traversal()
@@ -75,11 +75,13 @@ class BinarySearchTreeNode:
         elements = []
         
         if self.left:
-            elements += self.left.post_order_traversal
+            elements += self.left.post_order_traversal()
         
         if self.right:
             elements += self.right.post_order_traversal()
 
+        elements.append(self.data)
+        
         return elements
 
     def find_min(self):
